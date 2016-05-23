@@ -67,7 +67,7 @@
       _dataChanged: function( ){
 
         // prepare the load sequence for each file!
-        if(!this.data){
+        if(!this.data || this.data.length <= 0){
 
           return;
 
