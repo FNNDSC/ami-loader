@@ -17,23 +17,58 @@
   <body>
 
     <div class="vertical-section-container centered">
-      <h3>Basic ami-loader Demo</h3>
+      <h3>Load from url</h3>
 
       <demo-snippet>
 
-        <template is="dom-bind" id="loader">
-          <ami-loader data="[[data]]"></ami-loader>
+        <template is="dom-bind" id="urls">
+          <ami-loader urls="[[urls]]"></ami-loader>
         </template>
 
         <script>
           var t2 = ['36444280', '36444294', '36444308', '36444322', '36444336'];
-          var data = t2.map(function(v) {
-            return 'https://cdn.rawgit.com/FNNDSC/data/master/dicom/adi_brain/' + v;
-          });
-          window.console.log(data);
+          var urls = t2.map( function( v ) {
 
-          var loader = document.querySelector('#loader');
-          loader.data = data;
+            return 'https://cdn.rawgit.com/FNNDSC/data/master/dicom/adi_brain/' + v;
+
+          } );
+
+          var loader = document.querySelector( '#urls' );
+          loader.urls = urls;
+
+        </script>
+
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Load from file</h3>
+
+      <demo-snippet>
+
+        <input type="file" id="input" multiple>
+        <template is="dom-bind" id="files">
+          <ami-loader files="[[files]]"></ami-loader>
+        </template>
+
+        <script>
+          function attachFiles( evt ){
+
+            var loader = document.querySelector( '#files' );
+
+            // convert files object to an array
+            var files = [];
+            for ( var i = 0; i < evt.target.files.length; i++ ) {
+
+              files.push( evt.target.files[i] );
+
+            }
+
+            loader.files =  files;
+
+          };
+
+          document.querySelector( '#input' ).addEventListener('change', attachFiles, false);
 
         </script>
 
