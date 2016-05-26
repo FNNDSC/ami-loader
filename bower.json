@@ -4,7 +4,7 @@
   "main": "ami-loader.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "ami-js": "NicolasRannou/ami-js#master"
+    "ami-import": "NicolasRannou/ami-import#master"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
