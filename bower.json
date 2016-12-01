@@ -3,8 +3,8 @@
   "description": "Load medical imaging data and organize it in series/stack/frame",
   "main": "ami-loader.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0",
-    "ami-import": "NicolasRannou/ami-import#master"
+    "polymer": "Polymer/polymer#^1.7.0",
+    "ami-import": "NicolasRannou/ami-import#^v0.0.11"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
