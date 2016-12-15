@@ -1,6 +1,6 @@
 {
   "name": "ami-loader",
-  "version": "0.3",
+  "version": "0.4.0",
   "description": "Load medical imaging data and organize it in series/stack/frame",
   "main": "ami-loader.html",
   "dependencies": {
